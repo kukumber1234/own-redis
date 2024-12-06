@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	s "own-redis/internal/start"
+	s "own-redis/internal/start_server"
 	m "own-redis/models"
 )
 

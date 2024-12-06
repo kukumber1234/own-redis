@@ -72,7 +72,7 @@ func WriteToServer(sm *m.StoreManager, buf string, addr *net.UDPAddr, conn *net.
 		conn.WriteToUDP([]byte(response+"\n"), addr)
 
 	default:
-		_, err := conn.WriteToUDP([]byte("(nil)\n"), addr)
+		_, err := conn.WriteToUDP([]byte("(error) Undefined command\n"), addr)
 		if err != nil {
 			fmt.Println("No such method", err)
 			return

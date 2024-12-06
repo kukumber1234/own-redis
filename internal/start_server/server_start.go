@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net"
 
+	w "own-redis/internal/interact_with_server"
 	me "own-redis/internal/methods"
-	w "own-redis/internal/write"
 	mo "own-redis/models"
 )
 
