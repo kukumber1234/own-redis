@@ -48,9 +48,9 @@ NOTE:
 
 PING is one of the simplest Redis commands. It's used to check whether a Redis server is healthy. The response for the PING command is PONG.
 
-$ nc 0.0.0.0 8080
-PING
-PONG
+    $ nc 0.0.0.0 8080
+    PING
+    PONG
 
 ### SET
 
@@ -70,9 +70,9 @@ Example:
 
 SET should return OK.
 
-$ nc 0.0.0.0 8080
-SET Foo Bar
-OK
+    $ nc 0.0.0.0 8080
+    SET Foo Bar
+    OK
 
 #### Options
 
@@ -82,17 +82,17 @@ The SET command supports option PX that modify its behavior:
 
 Example:
 
-$ nc 0.0.0.0 8080
-SET foo bar px 10000
-OK
-GET foo
-bar
+    $ nc 0.0.0.0 8080
+    SET foo bar px 10000
+    OK
+    GET foo
+    bar
 
 A request within 10000 milliseconds will produce a bar response, but once the time is up, the server should clear the value and should return (nil) when client attempting to retrieve the value.
 
-$ nc 0.0.0.0 8080
-GET foo
-(nil)
+    $ nc 0.0.0.0 8080
+    GET foo
+    (nil)
 
 Note:
 
@@ -104,33 +104,33 @@ A GET request is any request in which the first argument contains the GET comman
 
 Example:
 
-$ nc 0.0.0.0 8080
-SET Foo Bar
-OK
-GET Foo
-Bar
+    $ nc 0.0.0.0 8080
+    SET Foo Bar
+    OK
+    GET Foo
+    Bar
 
 Otherwise, if the key is not in the storage, the server should return a (nil) message.
 
 Example:
 
-$ nc 0.0.0.0 8080
-GET RandomKey
-(nil)
+    $ nc 0.0.0.0 8080
+    GET RandomKey
+    (nil)
 
 If the client tries to insert a value into an existing key, your application should update the value to the last value specified by the client.
 
 Example:
 
-$ nc 0.0.0.0 8080
-SET Foo Bar
-OK
-GET Foo
-Bar
-SET Foo Buz
-OK
-GET Foo
-Buz
+    $ nc 0.0.0.0 8080
+    SET Foo Bar
+    OK
+    GET Foo
+    Bar
+    SET Foo Buz
+    OK
+    GET Foo
+    Buz
 
 ### Usage
 
@@ -138,18 +138,18 @@ Your program must be able to print usage information.
 
 Outcomes:
 
-    Program prints usage text.
+Program prints usage text.
 
-$ ./own-redis --help
-Own Redis
+    $ ./own-redis --help
+    Own Redis
 
-Usage:
-  own-redis [--port <N>]
-  own-redis --help
+    Usage:
+    own-redis [--port <N>]
+    own-redis --help
 
-Options:
-  --help       Show this screen.
-  --port N     Port number.
+    Options:
+    --help       Show this screen.
+    --port N     Port number.
 
 ## Guidelines from Author
 
