@@ -32,9 +32,9 @@ Basic operations of inserting and retrieving a value by key in the above mention
 
 $ go build -o own-redis .
 
-    The default port for the program should be 8080, but it can be changed with the optional argument --port.
+The default port for the program should be 8080, but it can be changed with the optional argument --port.
 
-$ ./own-redis --port 8080
+    $ ./own-redis --port 8080
 
 ## Mandatory Part
 
