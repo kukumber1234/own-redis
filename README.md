@@ -42,7 +42,7 @@ Writing a key-value store via REST API would be too easy, wouldn't it? Let's mak
 
 NOTE:
 
-    Command names, command arguments are case-insensitive. So PING, ping and Ping are all valid and denote the same command.
+Command names, command arguments are case-insensitive. So PING, ping and Ping are all valid and denote the same command.
 
 ### PING
 
@@ -96,7 +96,7 @@ A request within 10000 milliseconds will produce a bar response, but once the ti
 
 Note:
 
-    Your program will be tested with parallel/competitive requests. To avoid data races, you need to use synchronization primitives from the sync package.
+Your program will be tested with parallel/competitive requests. To avoid data races, you need to use synchronization primitives from the sync package.
 
 ### GET
 
