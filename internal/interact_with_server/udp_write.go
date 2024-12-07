@@ -21,17 +21,17 @@ func WriteToServer(sm *me.StoreManager, buf string, addr *net.UDPAddr, conn *net
 
 	switch command {
 	case "PING":
-		mo.Logger.Println("Send 'PING' command")
 		_, err := conn.WriteToUDP([]byte("PONG\n"), addr)
 		if err != nil {
 			mo.Logger.Println("Error sending PONG", err)
 			return
 		}
+		mo.Logger.Println("Send 'PING' command")
 
 	case "SET":
-		mo.Logger.Println("Send 'SET' command")
 		if len(parts) < 3 {
 			conn.WriteToUDP([]byte("(error) ERR wrong number of arguments for 'SET' command\n"), addr)
+			mo.Logger.Println("(error) ERR wrong number of arguments for 'SET' command")
 			return
 		}
 
@@ -62,23 +62,25 @@ func WriteToServer(sm *me.StoreManager, buf string, addr *net.UDPAddr, conn *net
 
 		response := sm.Set(key, value, ttl)
 		conn.WriteToUDP([]byte(response+"\n"), addr)
+		mo.Logger.Println("Send 'SET' command")
 
 	case "GET":
-		mo.Logger.Println("Sent 'GET' command")
 		if len(parts) != 2 {
 			conn.WriteToUDP([]byte("(error) ERR wrong number of arguments for 'GET' command\n"), addr)
+			mo.Logger.Println("(error) ERR wrong number of arguments for 'GET' command")
 			return
 		}
 
 		key := parts[1]
 		response := sm.Get(key)
 		conn.WriteToUDP([]byte(response+"\n"), addr)
+		mo.Logger.Println("Sent 'GET' command")
 
 	default:
 		_, err := conn.WriteToUDP([]byte("(error) Undefined command\n"), addr)
 		if err != nil {
-			mo.Logger.Println("No such method", err)
 			return
 		}
+		mo.Logger.Println("(error) Undefined command")
 	}
 }

@@ -1,3 +1,16 @@
-2024/12/07 17:27:47 Server started on port 8080
-LOG: 2024/12/07 19:02:24 main.go:23: Port can not be equal to 0
-LOG: 2024/12/07 19:02:29 main.go:23: Port can not be equal to 0
+LOG: 2024/12/07 19:51:53 udp_write.go:29: Send 'PING' command
+LOG: 2024/12/07 19:51:57 udp_write.go:29: Send 'PING' command
+LOG: 2024/12/07 19:51:59 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:52:36 udp_write.go:77: Sent 'GET' command
+LOG: 2024/12/07 19:54:27 udp_write.go:70: (error) ERR wrong number of arguments for 'GET' command
+LOG: 2024/12/07 19:56:38 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:40 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:41 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:42 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:42 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:43 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:43 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:44 udp_write.go:84: (error) Undefined command
+LOG: 2024/12/07 19:56:48 udp_write.go:77: Sent 'GET' command
+LOG: 2024/12/07 19:56:56 udp_write.go:65: Send 'SET' command
+LOG: 2024/12/07 19:57:00 udp_write.go:77: Sent 'GET' command
