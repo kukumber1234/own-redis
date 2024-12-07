@@ -1,15 +1,15 @@
 package write
 
 import (
-	"fmt"
 	"net"
 	"strconv"
 	"strings"
 
-	m "own-redis/internal/methods"
+	me "own-redis/internal/methods"
+	mo "own-redis/models"
 )
 
-func WriteToServer(sm *m.StoreManager, buf string, addr *net.UDPAddr, conn *net.UDPConn) {
+func WriteToServer(sm *me.StoreManager, buf string, addr *net.UDPAddr, conn *net.UDPConn) {
 	var setValue []string
 	var value string
 	var ttl int64
@@ -21,13 +21,15 @@ func WriteToServer(sm *m.StoreManager, buf string, addr *net.UDPAddr, conn *net.
 
 	switch command {
 	case "PING":
+		mo.Logger.Println("Send 'PING' command")
 		_, err := conn.WriteToUDP([]byte("PONG\n"), addr)
 		if err != nil {
-			fmt.Println("Error sending PONG", err)
+			mo.Logger.Println("Error sending PONG", err)
 			return
 		}
 
 	case "SET":
+		mo.Logger.Println("Send 'SET' command")
 		if len(parts) < 3 {
 			conn.WriteToUDP([]byte("(error) ERR wrong number of arguments for 'SET' command\n"), addr)
 			return
@@ -62,6 +64,7 @@ func WriteToServer(sm *m.StoreManager, buf string, addr *net.UDPAddr, conn *net.
 		conn.WriteToUDP([]byte(response+"\n"), addr)
 
 	case "GET":
+		mo.Logger.Println("Sent 'GET' command")
 		if len(parts) != 2 {
 			conn.WriteToUDP([]byte("(error) ERR wrong number of arguments for 'GET' command\n"), addr)
 			return
@@ -74,7 +77,7 @@ func WriteToServer(sm *m.StoreManager, buf string, addr *net.UDPAddr, conn *net.
 	default:
 		_, err := conn.WriteToUDP([]byte("(error) Undefined command\n"), addr)
 		if err != nil {
-			fmt.Println("No such method", err)
+			mo.Logger.Println("No such method", err)
 			return
 		}
 	}
