@@ -1,6 +1,7 @@
 package start
 
 import (
+	"fmt"
 	"net"
 
 	w "own-redis/internal/interact_with_server"
@@ -21,6 +22,7 @@ func StartServer(port int) {
 	}
 	defer conn.Close()
 
+	fmt.Printf("Server started on port %d\n", *mo.Port)
 	mo.Logger.Printf("Server started on port %d\n", *mo.Port)
 	sm := me.NewStoreManager()
 

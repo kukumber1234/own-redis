@@ -76,3 +76,4 @@ LOG: 2024/12/07 19:57:00 udp_write.go:77: Sent 'GET' command
 2024/12/07 20:17:09 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
 2024/12/07 20:17:18 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
 2024/12/07 20:17:25 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:21:43 /home/student/own-redis/internal/start_server/server_start.go:26: Server started on port 8080
