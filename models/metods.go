@@ -3,8 +3,6 @@ package models
 import (
 	"flag"
 	"log"
-	"sync"
-	"time"
 )
 
 var (
@@ -13,18 +11,3 @@ var (
 )
 
 var Logger *log.Logger
-
-type KeyValue struct {
-	data map[string]string
-	sync.RWMutex
-}
-
-type Expire struct {
-	expire map[string]time.Time
-	sync.RWMutex
-}
-
-type StoreManager struct {
-	keyValue *KeyValue
-	expire   *Expire
-}

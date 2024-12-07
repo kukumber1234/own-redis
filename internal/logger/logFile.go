@@ -13,6 +13,6 @@ func InitLogger() error {
 		return err
 	}
 
-	m.Logger = log.New(logFile, "LOG: ", log.Ldate|log.Ltime|log.Lshortfile)
+	m.Logger = log.New(logFile, "", log.Ldate|log.Ltime|log.Llongfile)
 	return nil
 }

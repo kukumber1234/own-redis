@@ -14,3 +14,65 @@ LOG: 2024/12/07 19:56:44 udp_write.go:84: (error) Undefined command
 LOG: 2024/12/07 19:56:48 udp_write.go:77: Sent 'GET' command
 LOG: 2024/12/07 19:56:56 udp_write.go:65: Send 'SET' command
 LOG: 2024/12/07 19:57:00 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:00:31 server_start.go:24: Server started on port 8080
+2024/12/07 20:00:58 server_start.go:24: Server started on port 8080
+2024/12/07 20:01:04 server_start.go:24: Server started on port 8080
+2024/12/07 20:01:08 server_start.go:24: Server started on port 1024
+2024/12/07 20:01:10 udp_write.go:29: Send 'PING' command
+2024/12/07 20:01:14 udp_write.go:29: Send 'PING' command
+2024/12/07 20:01:20 udp_write.go:65: Send 'SET' command
+2024/12/07 20:01:23 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:01:38 udp_write.go:65: Send 'SET' command
+2024/12/07 20:01:40 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:01:51 udp_write.go:65: Send 'SET' command
+2024/12/07 20:01:53 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:02:02 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:02:21 udp_write.go:84: (error) Undefined command
+2024/12/07 20:02:23 udp_write.go:84: (error) Undefined command
+2024/12/07 20:02:30 udp_write.go:84: (error) Undefined command
+2024/12/07 20:02:34 udp_write.go:84: (error) Undefined command
+2024/12/07 20:02:36 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:02:45 udp_write.go:77: Sent 'GET' command
+2024/12/07 20:05:23 udp_write.go:34: (error) ERR wrong number of arguments for 'SET' command
+2024/12/07 20:05:25 udp_write.go:34: (error) ERR wrong number of arguments for 'SET' command
+2024/12/07 20:05:29 udp_write.go:34: (error) ERR wrong number of arguments for 'SET' command
+2024/12/07 20:05:44 udp_write.go:65: Send 'SET' command
+2024/12/07 20:06:31 /home/student/own-redis/internal/start_server/server_start.go:24: Server started on port 1024
+2024/12/07 20:06:35 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+15:07:51 /home/student/own-redis/internal/start_server/server_start.go:24: Server started on port 1024
+15:07:53 /home/student/own-redis/internal/interact_with_server/udp_write.go:29: Send 'PING' command
+15:13:20 /home/student/own-redis/internal/interact_with_server/udp_write.go:70: (error) ERR wrong number of arguments for 'GET' command
+15:13:22 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:13:24 /home/student/own-redis/internal/start_server/server_start.go:24: Server started on port 1024
+2024/12/07 20:13:29 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:13:33 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:13:40 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:13:42 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:13:51 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:13:55 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:14:34 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:14:37 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:14:42 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:14:50 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:14:56 /home/student/own-redis/internal/interact_with_server/udp_write.go:70: (error) ERR wrong number of arguments for 'GET' command
+2024/12/07 20:15:04 /home/student/own-redis/internal/interact_with_server/udp_write.go:70: (error) ERR wrong number of arguments for 'GET' command
+2024/12/07 20:15:10 /home/student/own-redis/internal/interact_with_server/udp_write.go:70: (error) ERR wrong number of arguments for 'GET' command
+2024/12/07 20:15:19 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:15:22 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:15:33 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:15:35 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:15:40 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:15:43 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:16:18 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:16:22 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:16:27 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:16:30 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:16:46 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:16:51 /home/student/own-redis/internal/interact_with_server/udp_write.go:65: Send 'SET' command
+2024/12/07 20:16:56 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:16:59 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:17:02 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:17:07 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:17:09 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:17:18 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
+2024/12/07 20:17:25 /home/student/own-redis/internal/interact_with_server/udp_write.go:77: Sent 'GET' command
