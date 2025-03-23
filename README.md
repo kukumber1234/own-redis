@@ -1,4 +1,4 @@
-# own-redis
+# S-Cube
 ## Learning Objectives
 
     TCP/IP
